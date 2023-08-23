@@ -43,6 +43,8 @@ messageForm.addEventListener("submit", (event) => {
     
     removeButton.setAttribute("type", "button");
     editButton.setAttribute("type", "button");
+    removeButton.classList.add("message-buttons");
+    editButton.classList.add("message-buttons");
     
     removeButton.addEventListener("click", (event) => {
         let entry = removeButton.parentNode;
@@ -58,7 +60,7 @@ messageForm.addEventListener("submit", (event) => {
     editButton.addEventListener("click", (event) => {
         let span = editButton.previousSibling;
         let editText = span.innerText;
-        let newText = prompt("Edit message: ", editText.slice(8, editText.length - 1));
+        let newText = prompt("Edit message: ", editText.slice(7, editText.length - 1));
         span.innerText = " wrote: " + newText + " ";
     });
     
